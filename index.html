@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            width: 100%;
+            height: 100%;
+        }
+
+        .textAreaWrapper {
+            width: 100%;
+            height: 80vh;
+        }
+        .trueCond{
+            text-align: left;
+            background-color: springgreen;
+        }
+        .falseCond{
+            text-align: left;
+            background-color: Tomato ;
+        }
+        .regular{
+            text-align: left;
+        }
+
+        textarea {
+            width: 80%;
+            height: 95%;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table style="border: white;">
+        <tr style="border: white; font: 15px arial, sans-serif;">
+            <td style="border: white;">
+                <div>
+                    <label>
+                        <b>Enter code here</b>
+                    </label>
+                </div>
+            </td>
+            <td style="border: white;">
+                <div>
+                    <label>
+                        <b>Symbolic Substitution</b>
+                    </label>
+                </div>
+            </td>
+            <td style="border: white;">
+                <div>
+                    <label>
+                        <b>Parsed code here</b>
+                    </label>
+                </div>
+            </td>
+        </tr>
+        <tr style="border: white;">
+            <td style="border: white;">
+                <div class="textAreaWrapper">
+                    <textarea id="codePlaceholder" title="Enter code here"></textarea>
+                </div>
+            </td>
+            <td style="border: white;">
+                <div class="textAreaWrapper">
+                    <div class="textAreaWrapper" style="font: 15px arial, sans-serif;">
+                        <div id="symbolic" title="sy" style="width: 80%; height: 80%;"></div>
+                        <br>
+                        <label>
+                            <b>Input</b>
+                        </label>
+                        <br>
+                        <textarea id="input" title="inputt" style="width: 80%; height: 9%;"></textarea>
+                    </div>
+                </div>
+            </td>
+            <td style="border: white;">
+                <div class="textAreaWrapper">
+                    <textarea id="parsedCode" title="Parse code"></textarea>
+                </div>
+            </td>
+        </tr>
+        <tr style="border: white;">
+            <td style="border: white;">
+                <div>
+                    <button id="codeSubmissionButton" style="width: 80%; height: 10%;">Parse code</button>
+                </div>
+            </td>
+            <td style="border: white;">
+
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div id=showGraph> </div>
+    <table id="myTable" class="myTable" style="visibility: hidden; font: 15px arial, sans-serif;background: gainsboro;">
+        <td>
+            <b>Line</b>
+        </td>
+        <td>
+            <b>Type</b>
+        </td>
+        <td>
+            <b>Name</b>
+        </td>
+        <td>
+            <b>Condition</b>
+        </td>
+        <td>
+            <b>Value</b>
+        </td>
+        </tr>
+    </table>
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
